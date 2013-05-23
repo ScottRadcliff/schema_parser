@@ -39,7 +39,7 @@ module SchemaParser
       attributes = []
       collection.slice!(1, collection.size - 1).each do |line|
         scanned_word = line.scan(/\w+/)[2]
-        attributes << scanned_word unless scanned_word.nil? || SchemaParser.ignored_attribute?
+        attributes << scanned_word unless scanned_word.nil?
       end
       attributes
     end

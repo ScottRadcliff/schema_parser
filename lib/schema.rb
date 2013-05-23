@@ -1,3 +1,10 @@
+
+module ActiveRecord
+  class Schema
+    def self.define(something)
+    end
+  end
+end
 ActiveRecord::Schema.define(:version => 20120820230716) do
 
   create_table "posts", :force => true do |t|
