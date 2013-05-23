@@ -5,6 +5,7 @@ Tired of being hounded for yet another report? Yeah, me too. So I sought a solut
 The SchemaParser library aims to solve the reporting in Rails problem. It parses a schema file and generates a collection of models and attributes for use in generating reports. 
 
 ## Example
+```ruby
     # Assuming this is the schema.rb 
     ActiveRecord::Schema.define(:version => 20120820230716) do
 
@@ -23,7 +24,7 @@ The SchemaParser library aims to solve the reporting in Rails problem. It parses
     SchemaParser::Parser.new(path_to_schema.rb)
       #=> [{:model => "users", :attributes => ["email", "username"]},
           {:model => "products", :attributes => ["name", "price"]}]
-    
+```
 
 ### TODOS
 * Ignored attributes like password
